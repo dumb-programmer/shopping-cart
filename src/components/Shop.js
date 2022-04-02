@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "../styles/Shop.css";
+import Card from "./Card";
 
 const Shop = () => {
   const [items, setItems] = useState([
@@ -12,10 +13,7 @@ const Shop = () => {
   return (
     <div className="card-container">
       {items.map((item) => (
-        <div className="card">
-          <img src="https://via.placeholder.com/215x160" alt="placeholder" />
-          <h1>{item.name}</h1>
-        </div>
+        <Card key={item.id} name={item.name} />
       ))}
     </div>
   );
