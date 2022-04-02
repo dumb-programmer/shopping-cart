@@ -1,11 +1,18 @@
+import { Link } from "react-router-dom";
 import "../styles/Header.css";
 
 const Header = () => {
   return (
     <nav>
-      <li>Home</li>
-      <li>Shop</li>
-      <li>Cart</li>
+      <Link to="/">
+        <li>Home</li>
+      </Link>
+      <Link to="shop">
+        <li>Shop</li>
+      </Link>
+      <Link to="cart">
+        <li>Cart</li>
+      </Link>
     </nav>
   );
 };
