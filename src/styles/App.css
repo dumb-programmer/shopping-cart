@@ -6,5 +6,6 @@
 .App {
     min-height: 100vh;
     margin: 0;
-    position: absolute;
+    display: grid;
+    grid-template-rows: 50px 1fr 50px;
 }
