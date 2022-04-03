@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import cartIcon from "../shopping-cart.svg";
 import "../styles/Header.css";
 
 const Header = ({ cartCount }) => {
@@ -12,11 +13,15 @@ const Header = ({ cartCount }) => {
       </li>
       <li>
         <Link to="cart">
-          Cart
+          <img src={cartIcon} alt="cart icon" />
         </Link>
-        <sup>
-          <span className="cart-length">{cartCount || ""}</span>
-        </sup>
+        {cartCount ? (
+          <sup>
+            <span className="cart-length">{cartCount}</span>
+          </sup>
+        ) : (
+          ""
+        )}
       </li>
     </nav>
   );
