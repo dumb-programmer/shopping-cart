@@ -12,7 +12,7 @@ const Shop = () => {
     { id: 4, name: "Item 5", price: "30$", qty: 1 },
   ]);
 
-  const [cart, setCart, carCount, setCartCount] = useOutletContext();
+  const [cart, setCart, cartCount, setCartCount] = useOutletContext();
 
   const onAddCart = (event) => {
     const index = +event.target.parentNode.getAttribute("data-index");
