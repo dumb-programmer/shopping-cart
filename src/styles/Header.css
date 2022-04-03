@@ -9,4 +9,15 @@ nav {
 nav li {
     list-style: none;
     padding: 5px;
+    position: relative;
+}
+
+nav a {
+    color: inherit;
+    text-decoration: inherit;
+}
+
+.cart-length{
+    position: absolute;
+    top: 0;
 }
