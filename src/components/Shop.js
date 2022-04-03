@@ -10,10 +10,26 @@ const Shop = () => {
     { id: 3, name: "Item 4", price: "50$", qty: 1 },
     { id: 4, name: "Item 5", price: "30$", qty: 1 },
   ]);
+
+  const [cart, setCart] = useState([]);
+
+  const onAddCart = (event) => {
+    setCart((prevState) => [
+      ...prevState,
+      items[+event.target.parentNode.getAttribute("data-index")],
+    ]);
+  };
+
   return (
     <div className="card-container">
-      {items.map((item) => (
-        <Card key={item.id} name={item.name} />
+      {items.map((item, index) => (
+        <Card
+          key={item.id}
+          name={item.name}
+          price={item.price}
+          index={index}
+          onBtnClick={onAddCart}
+        />
       ))}
     </div>
   );
