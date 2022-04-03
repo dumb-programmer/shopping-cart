@@ -1,6 +1,7 @@
 import { useState } from "react";
-import "../styles/Shop.css";
+import { useOutletContext } from "react-router-dom";
 import Card from "./Card";
+import "../styles/Shop.css";
 
 const Shop = () => {
   const [items, setItems] = useState([
@@ -11,7 +12,7 @@ const Shop = () => {
     { id: 4, name: "Item 5", price: "30$", qty: 1 },
   ]);
 
-  const [cart, setCart] = useState([]);
+  const [cart, setCart] = useOutletContext();
 
   const onAddCart = (event) => {
     setCart((prevState) => [
