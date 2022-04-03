@@ -12,13 +12,24 @@ const Shop = () => {
     { id: 4, name: "Item 5", price: "30$", qty: 1 },
   ]);
 
-  const [cart, setCart] = useOutletContext();
+  const [cart, setCart, carCount, setCartCount] = useOutletContext();
 
   const onAddCart = (event) => {
-    setCart((prevState) => [
-      ...prevState,
-      items[+event.target.parentNode.getAttribute("data-index")],
-    ]);
+    const index = +event.target.parentNode.getAttribute("data-index");
+    const item = items[index];
+    let present = false;
+    for (let i = 0; i < cart.length; i++) {
+      if (cart[i].id === item.id) {
+        present = true;
+        break;
+      }
+    }
+    if (present) {
+      cart[index].qty++;
+    } else {
+      setCart((prevState) => [...prevState, item]);
+    }
+    setCartCount((prevCount) => prevCount + 1);
   };
 
   return (
