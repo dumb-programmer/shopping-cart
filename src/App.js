@@ -8,7 +8,7 @@ const App = () => {
   const [cart, setCart] = useState([]);
   return (
     <div className="App">
-      <Header />
+      <Header cartLength={cart.length} />
       <Outlet context={[cart, setCart]} />
       <Footer />
     </div>
