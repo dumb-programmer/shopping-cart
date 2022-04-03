@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import "../styles/Header.css";
 
-const Header = ({ cartLength }) => {
+const Header = ({ cartCount }) => {
   return (
     <nav>
       <Link to="/">
@@ -12,7 +12,7 @@ const Header = ({ cartLength }) => {
       </Link>
       <Link to="cart">
         <li>
-          Cart<span className="cart-length">{cartLength || ""}</span>
+          Cart<span className="cart-length">{cartCount || ""}</span>
         </li>
       </Link>
     </nav>

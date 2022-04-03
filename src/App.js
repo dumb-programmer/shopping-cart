@@ -6,10 +6,11 @@ import { useState } from "react";
 
 const App = () => {
   const [cart, setCart] = useState([]);
+  const [cartCount, setCartCount] = useState(0);
   return (
     <div className="App">
-      <Header cartLength={cart.length} />
-      <Outlet context={[cart, setCart]} />
+      <Header cartCount={cartCount} />
+      <Outlet context={[cart, setCart, cartCount, setCartCount]} />
       <Footer />
     </div>
   );
