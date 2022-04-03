@@ -9,3 +9,8 @@
     display: grid;
     grid-template-rows: 50px 1fr 50px;
 }
+
+a {
+    color: inherit;
+    text-decoration: inherit;
+}
