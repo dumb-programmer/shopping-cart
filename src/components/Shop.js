@@ -5,11 +5,41 @@ import "../styles/Shop.css";
 
 const Shop = () => {
   const [items, setItems] = useState([
-    { id: 0, name: "Item 1", price: 10, qty: 1 },
-    { id: 1, name: "Item 2", price: 15, qty: 1 },
-    { id: 2, name: "Item 3", price: 25, qty: 1 },
-    { id: 3, name: "Item 4", price: 50, qty: 1 },
-    { id: 4, name: "Item 5", price: 30, qty: 1 },
+    {
+      id: 0,
+      name: "Item 1",
+      price: 10,
+      qty: 1,
+      image: "https://via.placeholder.com/225x160",
+    },
+    {
+      id: 1,
+      name: "Item 2",
+      price: 15,
+      qty: 1,
+      image: "https://via.placeholder.com/225x160",
+    },
+    {
+      id: 2,
+      name: "Item 3",
+      price: 25,
+      qty: 1,
+      image: "https://via.placeholder.com/225x160",
+    },
+    {
+      id: 3,
+      name: "Item 4",
+      price: 50,
+      qty: 1,
+      image: "https://via.placeholder.com/225x160",
+    },
+    {
+      id: 4,
+      name: "Item 5",
+      price: 30,
+      qty: 1,
+      image: "https://via.placeholder.com/225x160",
+    },
   ]);
 
   const [cart, setCart, cartCount, setCartCount] = useOutletContext();
@@ -25,7 +55,11 @@ const Shop = () => {
       }
     }
     if (present) {
-      cart[index].qty++;
+      let cartIndex = 0;
+      while (cart[cartIndex].id !== items[index].id) {
+        cartIndex++;
+      }
+      cart[cartIndex].qty++;
     } else {
       setCart((prevState) => [...prevState, item]);
     }
@@ -40,6 +74,7 @@ const Shop = () => {
           name={item.name}
           price={item.price}
           index={index}
+          image={item.image}
           onBtnClick={onAddCart}
         />
       ))}
