@@ -1,0 +1,39 @@
+.cart-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.cart-container h3 {
+    margin: 20px;
+}
+
+.cart-container img {
+    float: left;
+}
+
+th {
+    padding: 20px;
+}
+
+tbody>tr>td {
+    text-align: center;
+}
+
+.product {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.product p {
+    margin-left: 20px;
+}
+
+.main-cart, .checkout {
+    border: 2px solid black;
+}
+
+td>button, td>p{
+    display: inline;
+    margin: 2px;
+}
