@@ -1,4 +1,5 @@
 import { useOutletContext } from "react-router-dom";
+import "../styles/Cart.css";
 
 const Cart = () => {
   const [cart, setCart] = useOutletContext();
@@ -9,17 +10,39 @@ const Cart = () => {
     }
     return total;
   }
-  return (
+  return cart.length ? (
     <div className="cart-container">
-      <ul>
-        {cart.map((item) => (
-          <p key={item.id}>
-            {item.name} - {item.price}$ - {item.qty}
-          </p>
-        ))}
-      </ul>
-      <h3>Total : {calculateTotal(cart)}$</h3>
+      <div className="main-cart">
+        <table>
+          <thead>
+            <th>Product</th>
+            <th>Qty</th>
+            <th>Total</th>
+          </thead>
+          <tbody>
+            {cart.map((item) => (
+              <tr key={item.id}>
+                <td className="product">
+                  <img src={item.image} alt={item.name + " image"} />
+                  <p>{item.name}</p>
+                </td>
+                <td>
+                  <button>-</button>
+                  <p>{item.qty}</p>
+                  <button>+</button>
+                </td>
+                <td>{item.qty * item.price}$</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+      <div className="checkout">
+        <h3>Total : {calculateTotal(cart)}$</h3>
+      </div>
     </div>
+  ) : (
+    <div></div>
   );
 };
 
