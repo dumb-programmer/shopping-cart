@@ -33,7 +33,33 @@ tbody>tr>td {
     border: 2px solid black;
 }
 
-td>button, td>p{
+td>button, td>p {
     display: inline;
-    margin: 2px;
+}
+
+td>button {
+    font-family: inherit;
+    font-size: 100%;
+    margin: 0;
+    border: 0;
+    background: 0;
+    height: 22px;
+    width: 22px;
+}
+
+.plus-btn {
+    background-image: url("../assests/icons/plus-square.svg");
+}
+
+.minus-btn {
+    background-image: url("../assests/icons/minus-square.svg");
+}
+
+.plus-btn, .minus-btn {
+    background-repeat: no-repeat;
+    margin: 5px;
+}
+
+.plus-btn:hover, .minus-btn:hover {
+    cursor: pointer;
 }

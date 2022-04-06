@@ -27,7 +27,6 @@ const Cart = () => {
       cart.splice(index, 1);
     }
     setCart((prevCart) => [...prevCart]);
-    // console.log(cart);
   };
 
   return cart.length ? (
@@ -46,10 +45,10 @@ const Cart = () => {
                   <img src={item.image} alt={item.name + " image"} />
                   <p>{item.name}</p>
                 </td>
-                <td>
-                  <button onClick={onMinus}>-</button>
+                <td className="qty-counter">
+                  <button className="minus-btn" onClick={onMinus}></button>
                   <p>{item.qty}</p>
-                  <button onClick={onPlus}>+</button>
+                  <button className="plus-btn" onClick={onPlus}></button>
                 </td>
                 <td>{item.qty * item.price}$</td>
               </tr>
