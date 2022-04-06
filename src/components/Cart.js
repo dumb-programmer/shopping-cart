@@ -1,4 +1,5 @@
 import { useOutletContext } from "react-router-dom";
+import skipIndex from "../utils/skipIndex";
 import "../styles/Cart.css";
 
 const Cart = () => {
@@ -14,19 +15,21 @@ const Cart = () => {
 
   const onPlus = (e) => {
     const index = +e.target.parentNode.parentNode.getAttribute("data-index");
-    cart[index].qty++;
-    setCart((prevCart) => [...prevCart]);
-    console.log(cart);
+    const newCart = [...cart];
+    newCart[index].qty++;
+    setCart(newCart);
   };
 
   const onMinus = (e) => {
     const index = +e.target.parentNode.parentNode.getAttribute("data-index");
-    if (cart[index].qty > 0) {
-      cart[index].qty--;
+    const newCart = [...cart];
+    if (cart[index].qty > 1) {
+      newCart[index].qty--;
+      setCart(newCart);
     } else {
-      cart.splice(index, 1);
+      const newCart = skipIndex(cart, index);
+      setCart(newCart);
     }
-    setCart((prevCart) => [...prevCart]);
   };
 
   return cart.length ? (

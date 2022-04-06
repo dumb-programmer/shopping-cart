@@ -59,9 +59,11 @@ const Shop = () => {
       while (cart[cartIndex].id !== items[index].id) {
         cartIndex++;
       }
-      cart[cartIndex].qty++;
+      const newCart = [...cart];
+      newCart[cartIndex].qty++;
+      setCart(newCart);
     } else {
-      setCart((prevState) => [...prevState, item]);
+      setCart([...cart, item]);
     }
     setCartCount((prevCount) => prevCount + 1);
   };

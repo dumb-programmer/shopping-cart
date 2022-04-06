@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import cartIcon from "../shopping-cart.svg";
+import cartIcon from "../assests/icons/shopping-cart.svg";
 import "../styles/Header.css";
 
 const Header = ({ cartCount }) => {
