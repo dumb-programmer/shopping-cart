@@ -1,6 +1,6 @@
 nav {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     flex-wrap: wrap;
     border: 2px solid black;
     padding: 10px;
@@ -17,7 +17,22 @@ nav a {
     text-decoration: inherit;
 }
 
-.cart-length{
+.nav-links {
+    display: flex;
+    justify-content: space-around;
+    width: 500px;
+}
+
+.cart-length {
     position: absolute;
     top: 0;
+}
+
+.logo a{
+    display: flex;
+    align-items: center;
+}
+
+.logo span {
+    margin-left: 5px;
 }
