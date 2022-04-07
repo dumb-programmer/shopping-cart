@@ -37,9 +37,11 @@ const Cart = () => {
       <div className="main-cart">
         <table>
           <thead>
-            <th>Product</th>
-            <th>Qty</th>
-            <th>Total</th>
+            <tr>
+              <th>Product</th>
+              <th>Qty</th>
+              <th>Total</th>
+            </tr>
           </thead>
           <tbody>
             {cart.map((item, index) => (
