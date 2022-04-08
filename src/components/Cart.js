@@ -1,9 +1,11 @@
 import { useOutletContext } from "react-router-dom";
 import skipIndex from "../utils/skipIndex";
 import "../styles/Cart.css";
+import { useState } from "react";
 
 const Cart = () => {
   const [cart, setCart] = useOutletContext();
+  const [shipping, setShipping] = useState(5);
 
   const calculateTotal = (items) => {
     let total = 0;
@@ -11,6 +13,11 @@ const Cart = () => {
       total += items[i].price * items[i].qty;
     }
     return total;
+  };
+
+  const onShippingChange = (e) => {
+    const shipping = +e.target.value;
+    setShipping(shipping);
   };
 
   const onPlus = (e) => {
@@ -76,11 +83,11 @@ const Cart = () => {
         <label htmlFor="shipping">
           Shipping <br />
         </label>
-        <select name="shipping" id="shipping">
-          <option value="$5">Standard Delivery - $5.00</option>
-          <option value="$15">Fast Delivery - $15.00</option>
+        <select name="shipping" id="shipping" onChange={onShippingChange}>
+          <option value="5">Standard Delivery - $5.00</option>
+          <option value="15">Fast Delivery - $15.00</option>
         </select>
-        <h3 id="total-cost">Total : {calculateTotal(cart)}$</h3>
+        <h3 id="total-cost">Total : {calculateTotal(cart) + shipping}$</h3>
         <button id="checkout-btn">Checkout</button>
       </div>
     </div>
