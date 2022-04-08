@@ -29,6 +29,11 @@ tbody>tr>td {
     margin-left: 20px;
 }
 
+.product img{
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+
 .product-details p {
     padding: 5px;
 }
@@ -92,4 +97,8 @@ td button {
     border-top: 3px solid #efefef;
     padding-top: 20px;
     margin: 40px;
+}
+
+#checkout-btn{
+    margin-left: 40px;
 }
