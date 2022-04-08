@@ -14,14 +14,14 @@ const Cart = () => {
   };
 
   const onPlus = (e) => {
-    const index = +e.target.parentNode.parentNode.getAttribute("data-index");
+    const index = +e.target.parentNode.parentNode.parentNode.getAttribute("data-index");
     const newCart = [...cart];
     newCart[index].qty++;
     setCart(newCart);
   };
 
   const onMinus = (e) => {
-    const index = +e.target.parentNode.parentNode.getAttribute("data-index");
+    const index = +e.target.parentNode.parentNode.parentNode.getAttribute("data-index");
     const newCart = [...cart];
     if (cart[index].qty > 1) {
       newCart[index].qty--;
@@ -48,7 +48,10 @@ const Cart = () => {
               <tr key={item.id} data-index={index}>
                 <td className="product">
                   <img src={item.image} alt={item.name + " image"} />
-                  <p>{item.name}</p>
+                  <div className="product-details">
+                    <p>{item.name}</p>
+                    <p>{item.price}$</p>
+                  </div>
                 </td>
                 <td>
                   <div className="qty-counter">
