@@ -14,14 +14,16 @@ const Cart = () => {
   };
 
   const onPlus = (e) => {
-    const index = +e.target.parentNode.parentNode.parentNode.getAttribute("data-index");
+    const index =
+      +e.target.parentNode.parentNode.parentNode.getAttribute("data-index");
     const newCart = [...cart];
     newCart[index].qty++;
     setCart(newCart);
   };
 
   const onMinus = (e) => {
-    const index = +e.target.parentNode.parentNode.parentNode.getAttribute("data-index");
+    const index =
+      +e.target.parentNode.parentNode.parentNode.getAttribute("data-index");
     const newCart = [...cart];
     if (cart[index].qty > 1) {
       newCart[index].qty--;
@@ -67,7 +69,19 @@ const Cart = () => {
         </table>
       </div>
       <div className="checkout">
-        <h3>Total : {calculateTotal(cart)}$</h3>
+        <h1>Order Summary</h1>
+        <p>
+          Items {cart.length} {calculateTotal(cart)}$
+        </p>
+        <label htmlFor="shipping">
+          Shipping <br />
+        </label>
+        <select name="shipping" id="shipping">
+          <option value="$5">Standard Delivery - $5.00</option>
+          <option value="$15">Fast Delivery - $15.00</option>
+        </select>
+        <h3 id="total-cost">Total : {calculateTotal(cart)}$</h3>
+        <button id="checkout-btn">Checkout</button>
       </div>
     </div>
   ) : (

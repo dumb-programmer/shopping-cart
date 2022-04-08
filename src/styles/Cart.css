@@ -69,3 +69,27 @@ td button {
 .plus-btn:hover, .minus-btn:hover {
     cursor: pointer;
 }
+
+.checkout{
+    padding: 20px;
+}
+
+.checkout>h1{
+    margin: 40px;
+    padding-bottom: 20px;
+    border-bottom: 3px solid #efefef;
+}
+
+.checkout>p, .checkout>select{
+    margin: 30px;
+}
+
+.checkout>label{
+    margin: 30px;
+}
+
+#total-cost{
+    border-top: 3px solid #efefef;
+    padding-top: 20px;
+    margin: 40px;
+}
