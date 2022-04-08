@@ -33,11 +33,13 @@ tbody>tr>td {
     border: 2px solid black;
 }
 
-td>button, td>p {
-    display: inline;
+.qty-counter{
+    display: flex;
+    align-items: center;
+    padding: 20px;
 }
 
-td>button {
+td button {
     font-family: inherit;
     font-size: 100%;
     margin: 0;

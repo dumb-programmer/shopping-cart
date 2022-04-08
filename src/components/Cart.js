@@ -50,10 +50,12 @@ const Cart = () => {
                   <img src={item.image} alt={item.name + " image"} />
                   <p>{item.name}</p>
                 </td>
-                <td className="qty-counter">
-                  <button className="minus-btn" onClick={onMinus}></button>
-                  <p>{item.qty}</p>
-                  <button className="plus-btn" onClick={onPlus}></button>
+                <td>
+                  <div className="qty-counter">
+                    <button className="minus-btn" onClick={onMinus}></button>
+                    <p>{item.qty}</p>
+                    <button className="plus-btn" onClick={onPlus}></button>
+                  </div>
                 </td>
                 <td>{item.qty * item.price}$</td>
               </tr>
