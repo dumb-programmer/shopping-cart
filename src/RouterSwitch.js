@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Routes, Route, HashRouter } from "react-router-dom";
 import App from "./App";
 import Cart from "./components/Cart";
 import Home from "./components/Home";
@@ -6,7 +6,7 @@ import Shop from "./components/Shop";
 
 const RouterSwitch = () => {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
         <Route path="/" element={<App />}>
           <Route index element={<Home />}></Route>
@@ -14,7 +14,7 @@ const RouterSwitch = () => {
           <Route path="cart" element={<Cart />}></Route>
         </Route>
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 };
 
