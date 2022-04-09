@@ -4,7 +4,7 @@ import "../styles/Cart.css";
 import { useState } from "react";
 
 const Cart = () => {
-  const [cart, setCart] = useOutletContext();
+  const [cart, setCart, cartCount, setCartCount] = useOutletContext();
   const [shipping, setShipping] = useState(5);
 
   const calculateTotal = (items) => {
@@ -26,6 +26,7 @@ const Cart = () => {
     const newCart = [...cart];
     newCart[index].qty++;
     setCart(newCart);
+    setCartCount((prevCount) => prevCount + 1);
   };
 
   const onMinus = (e) => {
@@ -39,6 +40,7 @@ const Cart = () => {
       const newCart = skipIndex(cart, index);
       setCart(newCart);
     }
+    setCartCount((prevCount) => prevCount - 1);
   };
 
   return cart.length ? (
