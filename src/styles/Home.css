@@ -1,0 +1,20 @@
+.home-content {
+    padding: 10px;
+}
+
+.section-heading {
+    margin: 15px;
+    text-align: center;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+}
+
+.book-item {
+    margin: 20px;
+    text-align: center;
+    width: 200px;
+}
