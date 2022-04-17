@@ -1,6 +1,29 @@
+@font-face {
+    font-family: playfairdisplay;
+    src: url("../assests/fonts/PlayfairDisplay-VariableFont_wght.ttf");
+}
+
 * {
     margin: 0;
     box-sizing: border-box;
+}
+
+:root {
+    --primary: #FFEEDB;
+    --secondary: #FFD8CC;
+    --tertiary: #FFBD9B;
+    --quatinary: #0A1D37;
+}
+
+body {
+    background-color: var(--primary);
+    color: var(--quatinary);
+    font-family: playfairdisplay;
+}
+
+button {
+    background-color: var(--quatinary);
+    color: var(--primary);
 }
 
 .App {
