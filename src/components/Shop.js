@@ -1,46 +1,46 @@
-import { useState } from "react";
 import { useOutletContext } from "react-router-dom";
 import Card from "./Card";
+import uniqid from "uniqid";
 import "../styles/Shop.css";
 
 const Shop = () => {
-  const [items, setItems] = useState([
+  const items = [
     {
-      id: 0,
+      id: uniqid(),
       name: "Item 1",
       price: 10,
       qty: 1,
       image: "https://via.placeholder.com/225x160",
     },
     {
-      id: 1,
+      id: uniqid(),
       name: "Item 2",
       price: 15,
       qty: 1,
       image: "https://via.placeholder.com/225x160",
     },
     {
-      id: 2,
+      id: uniqid(),
       name: "Item 3",
       price: 25,
       qty: 1,
       image: "https://via.placeholder.com/225x160",
     },
     {
-      id: 3,
+      id: uniqid(),
       name: "Item 4",
       price: 50,
       qty: 1,
       image: "https://via.placeholder.com/225x160",
     },
     {
-      id: 4,
+      id: uniqid(),
       name: "Item 5",
       price: 30,
       qty: 1,
       image: "https://via.placeholder.com/225x160",
     },
-  ]);
+  ];
 
   const [cart, setCart, cartCount, setCartCount] = useOutletContext();
 
@@ -49,14 +49,14 @@ const Shop = () => {
     const item = items[index];
     let present = false;
     for (let i = 0; i < cart.length; i++) {
-      if (cart[i].id === item.id) {
+      if (cart[i].name === item.name) {
         present = true;
         break;
       }
     }
     if (present) {
       let cartIndex = 0;
-      while (cart[cartIndex].id !== items[index].id) {
+      while (cart[cartIndex].name !== items[index].name) {
         cartIndex++;
       }
       const newCart = [...cart];
