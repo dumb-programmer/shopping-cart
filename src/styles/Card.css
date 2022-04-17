@@ -1,8 +1,8 @@
 .card {
     border-radius: 3%;
-    box-shadow: 10px 10px 15px 0px var(--quatinary);
-    -webkit-box-shadow: 10px 10px 15px 0px var(--quatinary);
-    -moz-box-shadow: 10px 10px 15px 0px var(--quatinary);
+    box-shadow: 10px 10px 15px 0px var(--quaternary);
+    -webkit-box-shadow: 10px 10px 15px 0px var(--quaternary);
+    -moz-box-shadow: 10px 10px 15px 0px var(--quaternary);
     margin: 10px;
     text-align: center;
     background-color: var(--tertiary);
