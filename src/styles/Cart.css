@@ -101,4 +101,9 @@ td button {
 
 #checkout-btn{
     margin-left: 40px;
+    border: none;
+    width: 150px;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
 }
