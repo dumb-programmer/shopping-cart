@@ -2,14 +2,20 @@ nav {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    border: 2px solid black;
-    padding: 10px;
+    background-color: var(--secondary);
 }
 
 nav li {
     list-style: none;
-    padding: 5px;
+    padding: 10px;
+    width: 80px;
+    text-align: center;
     position: relative;
+}
+
+nav li:hover {
+    background-color: #FFBD9B;
+    color: black;
 }
 
 nav a {
@@ -28,11 +34,15 @@ nav a {
     top: 0;
 }
 
-.logo a{
+.logo a {
     display: flex;
     align-items: center;
 }
 
 .logo span {
     margin-left: 5px;
+}
+
+.logo, nav li {
+    padding: 10px;
 }
