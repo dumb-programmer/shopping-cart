@@ -18,7 +18,7 @@ const Banner = () => {
   ];
   return (
     <div className="banner">
-      <div class="books">
+      <div className="books">
         <h1>New Arrivals</h1>
         {newArrivals.map(({ id, title, img }) => (
           <img src={img} key={id} alt={"cover of " + title} />
