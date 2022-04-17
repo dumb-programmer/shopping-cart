@@ -1,17 +1,22 @@
 {
   "files": {
-    "main.css": "/shopping-cart/static/css/main.b184d1da.css",
-    "main.js": "/shopping-cart/static/js/main.4dae0bb2.js",
+    "main.css": "/shopping-cart/static/css/main.be26b23c.css",
+    "main.js": "/shopping-cart/static/js/main.354fa18c.js",
+    "static/media/PlayfairDisplay-VariableFont_wght.ttf": "/shopping-cart/static/media/PlayfairDisplay-VariableFont_wght.54971b7248ded7d0d614.ttf",
+    "static/media/Stephen_King.jpg": "/shopping-cart/static/media/Stephen_King.a320928e221fdd17d2dc.jpg",
+    "static/media/A_short_history_of_everything.jpg": "/shopping-cart/static/media/A_short_history_of_everything.f0457b84297fb93f6753.jpg",
+    "static/media/Shoe_Dog.jpg": "/shopping-cart/static/media/Shoe_Dog.0f029531d4971bbc2106.jpg",
+    "static/media/Inspired.jpg": "/shopping-cart/static/media/Inspired.dddc8176e44ee77f7832.jpg",
     "index.html": "/shopping-cart/index.html",
     "static/media/shopping-cart.svg": "/shopping-cart/static/media/shopping-cart.33ce5d1587bf4a7a971bb64d9418e125.svg",
     "static/media/plus-square.svg": "/shopping-cart/static/media/plus-square.1254f9745b42217d16e8.svg",
     "static/media/book-open.svg": "/shopping-cart/static/media/book-open.67a128a70b4eaa20f68b805e7ef71e42.svg",
     "static/media/minus-square.svg": "/shopping-cart/static/media/minus-square.8d669f15adb02523d679.svg",
-    "main.b184d1da.css.map": "/shopping-cart/static/css/main.b184d1da.css.map",
-    "main.4dae0bb2.js.map": "/shopping-cart/static/js/main.4dae0bb2.js.map"
+    "main.be26b23c.css.map": "/shopping-cart/static/css/main.be26b23c.css.map",
+    "main.354fa18c.js.map": "/shopping-cart/static/js/main.354fa18c.js.map"
   },
   "entrypoints": [
-    "static/css/main.b184d1da.css",
-    "static/js/main.4dae0bb2.js"
+    "static/css/main.be26b23c.css",
+    "static/js/main.354fa18c.js"
   ]
 }
