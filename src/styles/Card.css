@@ -1,9 +1,19 @@
 .card {
-    border: 2px solid black;
     border-radius: 3%;
-    box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.23);
-    -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.23);
-    -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.23);
+    box-shadow: 10px 10px 15px 0px var(--quatinary);
+    -webkit-box-shadow: 10px 10px 15px 0px var(--quatinary);
+    -moz-box-shadow: 10px 10px 15px 0px var(--quatinary);
     margin: 10px;
     text-align: center;
+    background-color: var(--tertiary);
+    padding: 5px;
+}
+
+.card button {
+    width: 150px;
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 5px;
 }
