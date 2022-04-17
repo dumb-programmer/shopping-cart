@@ -50,6 +50,7 @@ const Cart = () => {
           <thead>
             <tr>
               <th>Product</th>
+              <th></th>
               <th>Qty</th>
               <th>Total</th>
             </tr>
@@ -58,7 +59,13 @@ const Cart = () => {
             {cart.map((item, index) => (
               <tr key={item.id} data-index={index}>
                 <td className="product">
-                  <img src={item.image} alt={item.name + " image"} />
+                  <img
+                    src={item.image}
+                    alt={item.name + " image"}
+                    className="thumbnail"
+                  />
+                </td>
+                <td>
                   <div className="product-details">
                     <p>{item.name}</p>
                     <p>{item.price}$</p>
