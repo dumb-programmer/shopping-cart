@@ -1,7 +1,7 @@
 import inspired from "../assests/images/Inspired.jpg";
 import shoeDog from "../assests/images/Shoe_Dog.jpg";
-import aShortHistory from "../assests/images/A_short_history_of_everything.jpg";
-import stephenKing from "../assests/images/Stephen_King.jpg";
+import theSunAndHerFlowers from "../assests/images/the_sun_and_her_flowers.jpg";
+import wanderingFalcon from "../assests/images/the_wandering_falcon.jpg";
 import uniqid from "uniqid";
 import "../styles/Banner.css";
 
@@ -11,17 +11,17 @@ const Banner = () => {
     { id: uniqid(), title: "Shoe Dog", img: shoeDog },
     {
       id: uniqid(),
-      title: "A short history of nearly everying",
-      img: aShortHistory,
+      title: "the sun and her flowers",
+      img: theSunAndHerFlowers,
     },
-    { id: uniqid(), title: "On writing a memoir", img: stephenKing },
+    { id: uniqid(), title: "Wandering falcon", img: wanderingFalcon },
   ];
   return (
     <div className="banner">
       <div className="books">
         <h1>New Arrivals</h1>
         {newArrivals.map(({ id, title, img }) => (
-          <img src={img} key={id} alt={"cover of " + title} />
+          <img src={img} key={id} alt={"cover of " + title} className="thumbnail"/>
         ))}
       </div>
       <div className="banner-text">
