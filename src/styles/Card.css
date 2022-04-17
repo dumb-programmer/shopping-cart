@@ -7,6 +7,8 @@
     text-align: center;
     background-color: var(--tertiary);
     padding: 5px;
+    height: 280px;
+    width: 220px;
 }
 
 .card button {
@@ -16,4 +18,8 @@
     border-radius: 5px;
     cursor: pointer;
     margin-top: 5px;
+}
+
+.card button:hover{
+    background-color: #12335f;
 }
