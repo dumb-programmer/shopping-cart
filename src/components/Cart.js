@@ -5,7 +5,7 @@ import "../styles/Cart.css";
 
 const Cart = () => {
   const [cart, setCart, cartCount, setCartCount] = useOutletContext();
-  const [shipping, setShipping] = useState(5);
+  const [shippingCharge, setShippingCharge] = useState(5);
 
   const calculateTotal = (items) => {
     let total = 0;
@@ -17,7 +17,7 @@ const Cart = () => {
 
   const onShippingChange = (e) => {
     const shipping = +e.target.value;
-    setShipping(shipping);
+    setShippingCharge(shipping);
   };
 
   return cart.length ? (
@@ -61,7 +61,9 @@ const Cart = () => {
           <option value="5">Standard Delivery - $5.00</option>
           <option value="15">Fast Delivery - $15.00</option>
         </select>
-        <h3 id="total-cost">Total : {calculateTotal(cart) + shipping}$</h3>
+        <h3 id="total-cost">
+          Total : {calculateTotal(cart) + shippingCharge}$
+        </h3>
         <button id="checkout-btn">Checkout</button>
       </div>
     </div>
