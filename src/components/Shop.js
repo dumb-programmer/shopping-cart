@@ -105,40 +105,19 @@ const Shop = () => {
 
   const [cart, setCart, cartCount, setCartCount] = useOutletContext();
 
-  const onAddCart = (event) => {
-    const index = +event.target.parentNode.getAttribute("data-index");
-    const item = items[index];
-    let present = false;
-    for (let i = 0; i < cart.length; i++) {
-      if (cart[i].name === item.name) {
-        present = true;
-        break;
-      }
-    }
-    if (present) {
-      let cartIndex = 0;
-      while (cart[cartIndex].name !== items[index].name) {
-        cartIndex++;
-      }
-      const newCart = [...cart];
-      newCart[cartIndex].qty++;
-      setCart(newCart);
-    } else {
-      setCart([...cart, item]);
-    }
-    setCartCount((prevCount) => prevCount + 1);
-  };
-
   return (
     <div className="card-container">
       {items.map((item, index) => (
         <Card
           key={item.id}
           name={item.name}
+          image={item.image}
           price={item.price}
           index={index}
-          image={item.image}
-          onBtnClick={onAddCart}
+          items={items}
+          cart={cart}
+          setCart={setCart}
+          setCartCount={setCartCount}
         />
       ))}
     </div>
