@@ -1,7 +1,7 @@
 import { useOutletContext } from "react-router-dom";
-import skipIndex from "../utils/skipIndex";
-import "../styles/Cart.css";
 import { useState } from "react";
+import CartItem from "./CartItem";
+import "../styles/Cart.css";
 
 const Cart = () => {
   const [cart, setCart, cartCount, setCartCount] = useOutletContext();
@@ -20,29 +20,6 @@ const Cart = () => {
     setShipping(shipping);
   };
 
-  const onPlus = (e) => {
-    const index =
-      +e.target.parentNode.parentNode.parentNode.getAttribute("data-index");
-    const newCart = [...cart];
-    newCart[index].qty++;
-    setCart(newCart);
-    setCartCount((prevCount) => prevCount + 1);
-  };
-
-  const onMinus = (e) => {
-    const index =
-      +e.target.parentNode.parentNode.parentNode.getAttribute("data-index");
-    const newCart = [...cart];
-    if (cart[index].qty > 1) {
-      newCart[index].qty--;
-      setCart(newCart);
-    } else {
-      const newCart = skipIndex(cart, index);
-      setCart(newCart);
-    }
-    setCartCount((prevCount) => prevCount - 1);
-  };
-
   return cart.length ? (
     <div className="cart-container">
       <div className="main-cart">
@@ -57,29 +34,17 @@ const Cart = () => {
           </thead>
           <tbody>
             {cart.map((item, index) => (
-              <tr key={item.id} data-index={index}>
-                <td className="product">
-                  <img
-                    src={item.image}
-                    alt={item.name + " image"}
-                    className="thumbnail"
-                  />
-                </td>
-                <td>
-                  <div className="product-details">
-                    <p>{item.name}</p>
-                    <p>{item.price}$</p>
-                  </div>
-                </td>
-                <td>
-                  <div className="qty-counter">
-                    <button className="minus-btn" onClick={onMinus}></button>
-                    <p>{item.qty}</p>
-                    <button className="plus-btn" onClick={onPlus}></button>
-                  </div>
-                </td>
-                <td>{item.qty * item.price}$</td>
-              </tr>
+              <CartItem
+                key={item.id}
+                index={index}
+                name={item.name}
+                image={item.image}
+                price={item.price}
+                qty={item.qty}
+                cart={cart}
+                setCart={setCart}
+                setCartCount={setCartCount}
+              />
             ))}
           </tbody>
         </table>
