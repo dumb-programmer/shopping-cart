@@ -5,10 +5,10 @@
 
 
 :root {
-    --primary: #FFEEDB;
-    --secondary: #FFD8CC;
-    --tertiary: #FFBD9B;
-    --quaternary: #0A1D37;
+    --primary: #EEEEEE;
+    --secondary: #DDDDDD;
+    --tertiary: #FF8C32;
+    --quaternary: #06113C;
 }
 
 * {
