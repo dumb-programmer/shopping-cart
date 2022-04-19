@@ -18,11 +18,18 @@ const Banner = () => {
   ];
   return (
     <div className="banner">
-      <div className="books">
+      <div>
         <h1>New Arrivals</h1>
-        {newArrivals.map(({ id, title, img }) => (
-          <img src={img} key={id} alt={"cover of " + title} className="thumbnail"/>
-        ))}
+        <div className="books">
+          {newArrivals.map(({ id, title, img }) => (
+            <img
+              src={img}
+              key={id}
+              alt={"cover of " + title}
+              className="thumbnail"
+            />
+          ))}
+        </div>
       </div>
       <div className="banner-text">
         <p>
