@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/shopping-cart/static/css/main.f27910a3.css",
-    "main.js": "/shopping-cart/static/js/main.776e4eb4.js",
+    "main.css": "/shopping-cart/static/css/main.cf5a041f.css",
+    "main.js": "/shopping-cart/static/js/main.69e031f2.js",
     "static/media/PlayfairDisplay-VariableFont_wght.ttf": "/shopping-cart/static/media/PlayfairDisplay-VariableFont_wght.54971b7248ded7d0d614.ttf",
     "index.html": "/shopping-cart/index.html",
     "static/media/shopping-cart.svg": "/shopping-cart/static/media/shopping-cart.33ce5d1587bf4a7a971bb64d9418e125.svg",
     "static/media/plus-square.svg": "/shopping-cart/static/media/plus-square.1254f9745b42217d16e8.svg",
     "static/media/book-open.svg": "/shopping-cart/static/media/book-open.67a128a70b4eaa20f68b805e7ef71e42.svg",
     "static/media/minus-square.svg": "/shopping-cart/static/media/minus-square.8d669f15adb02523d679.svg",
-    "main.f27910a3.css.map": "/shopping-cart/static/css/main.f27910a3.css.map",
-    "main.776e4eb4.js.map": "/shopping-cart/static/js/main.776e4eb4.js.map"
+    "main.cf5a041f.css.map": "/shopping-cart/static/css/main.cf5a041f.css.map",
+    "main.69e031f2.js.map": "/shopping-cart/static/js/main.69e031f2.js.map"
   },
   "entrypoints": [
-    "static/css/main.f27910a3.css",
-    "static/js/main.776e4eb4.js"
+    "static/css/main.cf5a041f.css",
+    "static/js/main.69e031f2.js"
   ]
 }
