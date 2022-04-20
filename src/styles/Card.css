@@ -18,7 +18,3 @@
     cursor: pointer;
     margin-top: 5px;
 }
-
-.card button:hover{
-    background-color: #12335f;
-}

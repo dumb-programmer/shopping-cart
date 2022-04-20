@@ -127,7 +127,3 @@ td button {
     border-radius: 5px;
     cursor: pointer;
 }
-
-#checkout-btn:hover {
-    background-color: #12335f;
-}
