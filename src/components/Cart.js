@@ -1,6 +1,7 @@
 import { useOutletContext } from "react-router-dom";
 import { useState } from "react";
 import CartItem from "./CartItem";
+import EmptyCart from "./EmptyCart";
 import "../styles/Cart.css";
 
 const Cart = () => {
@@ -68,7 +69,7 @@ const Cart = () => {
       </div>
     </div>
   ) : (
-    <div></div>
+    <EmptyCart />
   );
 };
 
