@@ -6,15 +6,20 @@
     margin: 10px;
     text-align: center;
     padding: 10px;
-    height: 280px;
+    height: 323px;
     width: 220px;
 }
 
-.card button {
+#add-to-cart-btn {
     width: 150px;
     padding: 8px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     margin-top: 5px;
+}
+
+.item-qty {
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
