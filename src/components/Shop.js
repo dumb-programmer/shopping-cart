@@ -14,9 +14,10 @@ import houseOfEarthAndBlood from "../assests/images/house_of_earth_and_blood.jpg
 import seaOfTranquility from "../assests/images/sea_of_tranquility.jpg";
 import milkAndHoney from "../assests/images/milk_and_honey.jpg";
 import "../styles/Shop.css";
+import { useState } from "react";
 
 const Shop = () => {
-  const items = [
+  const [items, setItems] = useState([
     {
       id: uniqid(),
       name: "Inspired",
@@ -101,7 +102,7 @@ const Shop = () => {
       qty: 1,
       image: milkAndHoney,
     },
-  ];
+  ]);
 
   const [cart, setCart, cartCount, setCartCount] = useOutletContext();
 
@@ -113,8 +114,10 @@ const Shop = () => {
           name={item.name}
           image={item.image}
           price={item.price}
+          qty={item.qty}
           index={index}
           items={items}
+          setItems={setItems}
           cart={cart}
           setCart={setCart}
           setCartCount={setCartCount}
