@@ -5,12 +5,12 @@ const EmptyCart = () => {
     <div
       style={{
         display: "flex",
-        flexDirection:"column",
+        flexDirection: "column",
         justifyContent: "center",
         alignItems: "center",
       }}
     >
-      <img src={emptyCart} height="300px" width="300px" />
+      <img src={emptyCart} alt="Empty cart" height="300px" width="300px" />
       <h1>Looks like your cart is empty</h1>
     </div>
   );
