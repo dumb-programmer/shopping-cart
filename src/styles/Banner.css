@@ -33,6 +33,10 @@
     margin-bottom: 40px;
 }
 
-.books{
+.banner-text button:hover {
+    background-color: #12335f;
+}
+
+.books {
     display: flex;
 }
