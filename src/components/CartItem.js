@@ -28,6 +28,14 @@ const CartItem = ({
     }
     setCartCount((prevCount) => prevCount - 1);
   };
+
+  const onRemove = () => {
+    const newCart = [...cart];
+    setCartCount((prevCount) => prevCount - cart[index].qty);
+    newCart.splice(index, 1);
+    setCart(newCart);
+  };
+
   return (
     <>
       <tr>
@@ -48,6 +56,9 @@ const CartItem = ({
           </div>
         </td>
         <td>{qty * price}$</td>
+        <td>
+          <button className="remove-btn" onClick={onRemove}></button>
+        </td>
       </tr>
     </>
   );

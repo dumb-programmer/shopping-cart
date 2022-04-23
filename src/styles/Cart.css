@@ -77,9 +77,16 @@ td button {
     margin: 5px;
 }
 
-.plus-btn:hover, .minus-btn:hover {
+.plus-btn:hover, .minus-btn:hover, .remove-btn:hover {
     cursor: pointer;
+    background-color: var(--secondary);
 }
+
+.remove-btn {
+    background-image: url("../assests/images/trash-2.svg");
+    background-repeat: no-repeat;
+}
+
 
 .checkout {
     padding: 20px;
