@@ -14,6 +14,7 @@ const Card = ({
 }) => {
   const onAddCart = () => {
     const item = items[index];
+    const newItem = { ...item };
     let present = false;
     for (let i = 0; i < cart.length; i++) {
       if (cart[i].name === item.name) {
@@ -27,17 +28,17 @@ const Card = ({
         cartIndex++;
       }
       const newCart = [...cart];
-      newCart[cartIndex].qty += items[index].qty;
+      newCart[cartIndex].qty += item.qty;
       setCart(newCart);
     } else {
-      setCart([...cart, item]);
+      setCart([...cart, newItem]);
     }
-    setCartCount((prevCount) => prevCount + items[index].qty);
+    setCartCount((prevCount) => prevCount + item.qty);
   };
 
   const onInputChange = (e) => {
     const newItems = [...items];
-    const newQty = +e.target.value;
+    const newQty = +e.target.value ? +e.target.value : 1;
     newItems[index].qty = newQty;
     setItems(newItems);
   };
@@ -62,7 +63,7 @@ const Card = ({
           }}
         />
       </div>
-      <button id="add-to-cart-btn" onClick={onAddCart}>
+      <button className="add-to-cart-btn" onClick={onAddCart}>
         Add to cart
       </button>
     </div>
