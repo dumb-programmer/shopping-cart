@@ -3,6 +3,7 @@ import shoeDog from "../assests/images/Shoe_Dog.jpg";
 import theSunAndHerFlowers from "../assests/images/the_sun_and_her_flowers.jpg";
 import wanderingFalcon from "../assests/images/the_wandering_falcon.jpg";
 import uniqid from "uniqid";
+import { useNavigate } from "react-router-dom";
 import "../styles/Banner.css";
 
 const Banner = () => {
@@ -16,6 +17,13 @@ const Banner = () => {
     },
     { id: uniqid(), title: "Wandering falcon", img: wanderingFalcon },
   ];
+
+  const navigate = useNavigate();
+
+  const onBtnClick = () => {
+    navigate("/shop");
+  };
+
   return (
     <div className="banner">
       <div>
@@ -36,7 +44,7 @@ const Banner = () => {
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat,
           ullam!
         </p>
-        <button>Shop Now</button>
+        <button onClick={onBtnClick}>Shop Now</button>
       </div>
     </div>
   );
