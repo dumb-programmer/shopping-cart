@@ -1,0 +1,251 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App component renders correctly 1`] = `
+<div>
+  <div
+    class="App"
+  >
+    <nav>
+      <div
+        class="logo"
+      >
+        <a
+          href="#/"
+        >
+          <img
+            alt="logo"
+            src="book-open.svg"
+          />
+          <span>
+            The Book Shop
+          </span>
+        </a>
+      </div>
+      <ul
+        class="nav-links"
+      >
+        <li>
+          <a
+            href="#/"
+          >
+            Home
+          </a>
+        </li>
+        <li>
+          <a
+            href="#/shop"
+          >
+            Shop
+          </a>
+        </li>
+        <li>
+          <a
+            href="#/cart"
+          >
+            <img
+              alt="cart icon"
+              src="shopping-cart.svg"
+            />
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <div
+      class="home-content"
+    >
+      <div
+        class="banner"
+      >
+        <div>
+          <h1>
+            New Arrivals
+          </h1>
+          <div
+            class="books"
+          >
+            <img
+              alt="cover of Inspired"
+              class="thumbnail"
+              src="Inspired.jpg"
+            />
+            <img
+              alt="cover of Shoe Dog"
+              class="thumbnail"
+              src="Shoe_Dog.jpg"
+            />
+            <img
+              alt="cover of the sun and her flowers"
+              class="thumbnail"
+              src="the_sun_and_her_flowers.jpg"
+            />
+            <img
+              alt="cover of Wandering falcon"
+              class="thumbnail"
+              src="the_wandering_falcon.jpg"
+            />
+          </div>
+        </div>
+        <div
+          class="banner-text"
+        >
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, ullam!
+          </p>
+          <button>
+            Shop Now
+          </button>
+        </div>
+      </div>
+      <h1
+        class="section-heading"
+      >
+        Picks of the Month
+      </h1>
+      <div
+        class="flex-container"
+      >
+        <div
+          class="book-item"
+        >
+          <img
+            alt="cover of Young Mungo"
+            src="young_mungo.jpg"
+          />
+          <p>
+            <b>
+              Young Mungo
+            </b>
+          </p>
+          <p>
+            by Douglas Stuart
+          </p>
+        </div>
+        <div
+          class="book-item"
+        >
+          <img
+            alt="cover of Four Treasures of the Sky"
+            src="four_treasures_of_the_sky.jpg"
+          />
+          <p>
+            <b>
+              Four Treasures of the Sky
+            </b>
+          </p>
+          <p>
+            by Jenny Tinghui Zhang
+          </p>
+        </div>
+        <div
+          class="book-item"
+        >
+          <img
+            alt="cover of Nobody Gets Out Alive"
+            src="nobody_gets_out_alive.jpg"
+          />
+          <p>
+            <b>
+              Nobody Gets Out Alive
+            </b>
+          </p>
+          <p>
+            by Leigh Newman
+          </p>
+        </div>
+        <div
+          class="book-item"
+        >
+          <img
+            alt="cover of An Arrow to the Moon"
+            src="an_arrow_to_the_moon.jpg"
+          />
+          <p>
+            <b>
+              An Arrow to the Moon
+            </b>
+          </p>
+          <p>
+            by Emily X.R. Pan
+          </p>
+        </div>
+      </div>
+      <h1
+        class="section-heading"
+      >
+        Best Sellers
+      </h1>
+      <div
+        class="flex-container"
+      >
+        <div
+          class="book-item"
+        >
+          <img
+            alt="cover of Time Is a Mother"
+            src="time_is_a_mother.jpg"
+          />
+          <p>
+            <b>
+              Time Is a Mother
+            </b>
+          </p>
+          <p>
+            by Ocean Vuong
+          </p>
+        </div>
+        <div
+          class="book-item"
+        >
+          <img
+            alt="cover of House of Earth and Blood"
+            src="house_of_earth_and_blood.jpg"
+          />
+          <p>
+            <b>
+              House of Earth and Blood
+            </b>
+          </p>
+          <p>
+            by Sarah J. Maas
+          </p>
+        </div>
+        <div
+          class="book-item"
+        >
+          <img
+            alt="cover of Sea of Tranquility"
+            src="sea_of_tranquility.jpg"
+          />
+          <p>
+            <b>
+              Sea of Tranquility
+            </b>
+          </p>
+          <p>
+            by Emily St. John Mandel
+          </p>
+        </div>
+        <div
+          class="book-item"
+        >
+          <img
+            alt="cover of milk and honey"
+            src="milk_and_honey.jpg"
+          />
+          <p>
+            <b>
+              milk and honey
+            </b>
+          </p>
+          <p>
+            by Rupi Kaur
+          </p>
+        </div>
+      </div>
+    </div>
+    <footer>
+      © 2022
+    </footer>
+  </div>
+</div>
+`;
