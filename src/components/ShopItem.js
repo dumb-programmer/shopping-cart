@@ -1,6 +1,6 @@
-import "../styles/Card.css";
+import "../styles/ShopItem.css";
 
-const Card = ({
+const ShopItem = ({
   name,
   image,
   price,
@@ -70,4 +70,4 @@ const Card = ({
   );
 };
 
-export default Card;
+export default ShopItem;

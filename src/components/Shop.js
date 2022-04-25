@@ -1,5 +1,5 @@
 import { useOutletContext } from "react-router-dom";
-import Card from "./Card";
+import ShopItem from "./ShopItem";
 import uniqid from "uniqid";
 import inspired from "../assests/images/Inspired.jpg";
 import shoeDog from "../assests/images/Shoe_Dog.jpg";
@@ -109,7 +109,7 @@ const Shop = () => {
   return (
     <div className="card-container">
       {items.map((item, index) => (
-        <Card
+        <ShopItem
           key={item.id}
           name={item.name}
           image={item.image}
