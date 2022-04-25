@@ -50,14 +50,26 @@ const CartItem = ({
         </td>
         <td>
           <div className="qty-counter">
-            <button className="minus-btn" onClick={onMinus}></button>
-            <p>{qty}</p>
-            <button className="plus-btn" onClick={onPlus}></button>
+            <button
+              className="minus-btn"
+              aria-label="minus button"
+              onClick={onMinus}
+            ></button>
+            <p data-testid={`item${index}-qty`}>{qty}</p>
+            <button
+              className="plus-btn"
+              aria-label="plus button"
+              onClick={onPlus}
+            ></button>
           </div>
         </td>
         <td>{qty * price}$</td>
         <td>
-          <button className="remove-btn" onClick={onRemove}></button>
+          <button
+            className="remove-btn"
+            aria-label="remove button"
+            onClick={onRemove}
+          ></button>
         </td>
       </tr>
     </>
