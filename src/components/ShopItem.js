@@ -50,12 +50,13 @@ const ShopItem = ({
         <b>{name}</b>
       </p>
       <p>{price}$</p>
-      <div className="item-qty">
+      <div className="item-qty" aria-label="item-quantity">
         <input
           type="number"
           value={qty}
           min="1"
           onChange={onInputChange}
+          data-testid={`select-${index}`}
           style={{
             textAlign: "center",
             width: "70px",
@@ -63,7 +64,11 @@ const ShopItem = ({
           }}
         />
       </div>
-      <button className="add-to-cart-btn" onClick={onAddCart}>
+      <button
+        className="add-to-cart-btn"
+        onClick={onAddCart}
+        data-testid={`add-to-cart-btn${index}`}
+      >
         Add to cart
       </button>
     </div>
